@@ -12,7 +12,7 @@ if(isset($_POST['sub']))
 		if(in_array($exten['extension'],$arr_ex))
 		{
 			$source=$_FILES['image']['tmp_name'];
-			$target='upload/'.$_FILES['image']['name'];
+			$target=$_FILES['image']['name'];
 			if(move_uploaded_file($source,$target))
 			{
 				$path=$target;
