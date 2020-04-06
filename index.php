@@ -10,7 +10,7 @@ $path="";
 			$ex=pathinfo($_FILES['image']['name']);
 			$ex=strtolower($ex['extension']);
 			$extension=array('jpg','jpeg','png');
-			$location="upload/".$file;
+			$location=$file;
 			if(in_array($ex,$extension))
 			{
 				if(compressImage($_FILES['image']['tmp_name'],$location,20))
